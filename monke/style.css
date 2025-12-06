@@ -1,22 +1,27 @@
 body {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;   /* allow content to grow */
+    height: auto;        /* removes forced 100vh issue on phones */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     font-family: Arial, sans-serif;
     color: white;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;    /* slightly smaller, more mobile-safe */
     font-weight: bold;
     background: linear-gradient(135deg, #00c853, #00e676, #1de9b6);
-    overflow: hidden;
+    
+    overflow-y: auto;     /* ENABLE SCROLLING */
+    -webkit-overflow-scrolling: touch; /* smooth iPhone scrolling */
+    padding: 20px;        /* spacing so text isn't flush */
 }
 
 #message {
     position: relative;
     z-index: 2;
+    margin-bottom: 20px;
 }
 
 #monke {
