@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #00c853, #00e676, #1de9b6);
+    overflow: hidden;
+}
+
+#message {
+    position: relative;
+    z-index: 2;
+}
+
+#monke {
+    width: 200px;
+    margin-top: 20px;
+    position: relative;
+    animation: float 2s ease-in-out infinite;
+    z-index: 3;
+}
+
+@keyframes float {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
