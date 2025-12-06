@@ -1,0 +1,15 @@
+#monke {
+    width: 180px;
+    position: absolute;
+    top: calc(50% + 80px); /* pushes monke below the text */
+    left: 50%;
+    transform: translateX(-50%);
+    animation: float 2s ease-in-out infinite;
+    z-index: 3;
+}
+
+@keyframes float {
+    0% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-12px); }
+    100% { transform: translateX(-50%) translateY(0); }
+}
